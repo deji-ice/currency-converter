@@ -1,12 +1,11 @@
-import "./App.css";
+import Converter from "./components/Converter";
 import Header from "./components/Header";
-import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[#163300] text-[#9fe870] flex flex-col gap-20 h-screen p-5" >
       <Header />
-      <TodoList />
+      <Converter />
     </div>
   );
 }
