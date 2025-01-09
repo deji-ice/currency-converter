@@ -34,25 +34,26 @@ const Converter = () => {
 
   return (
     <div className="bg-white h-[20rem] flex flex-col gap-5 justify-center items-center rounded-xl">
-      <Inputs
-        amount={amount}
-        setAmount={setAmount}
-        currency={currency}
-        currencies={currencies}
-        setCurrency={setCurrency}
-      />
-      <CgArrowsExchangeAltV
-        onClick={handleSwap}
-        className="text-5xl text-black"
-      />
-      <Inputs
-        currency={convertedCurrency}
-        setCurrency={setConvertedCurrency}
-        amount={convertedAmount}
-        setCurrencies={setCurrencies}
-        setAmount={setConvertedAmount}
-      />
-
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
+        <Inputs
+          amount={amount}
+          setAmount={setAmount}
+          currency={currency}
+          currencies={currencies}
+          setCurrency={setCurrency}
+        />
+        <CgArrowsExchangeAltV
+          onClick={handleSwap}
+          className="text-5xl text-black"
+        />
+        <Inputs
+          currency={convertedCurrency}
+          setCurrency={setConvertedCurrency}
+          amount={convertedAmount}
+          setCurrencies={setCurrencies}
+          setAmount={setConvertedAmount}
+        />
+      </div>
       <button
         onClick={handleConvert}
         className="rounded-lg px-5 font-semibold py-2 text-[#163300] bg-[#9fe870] hover:bg-[#8cd360] transition-all duration-300 ease-in-out "

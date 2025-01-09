@@ -18,7 +18,7 @@ const Inputs = ({ amount, setAmount, setCurrency, currency, currencies }) => {
     <span className="w-fit relative px-2">
       <input
         type="number"
-        className="border border-black w-[24rem] p-5 font-semibold text-black text-2xl rounded-lg [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+        className="border bg-green-50/30 border-black w-[24rem] p-5 font-semibold text-black text-2xl rounded-lg [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
         placeholder="0"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
