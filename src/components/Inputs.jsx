@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
-const Inputs = ({ amount, setAmount, setCurrency, currency, currencies }) => {
+const Inputs = ({ amount, setAmount, setCurrency, currency }) => {
+  
   const currencyList = [
     'ngn', // Nigeria
     'ghs', // Ghana
