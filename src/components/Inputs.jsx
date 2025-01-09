@@ -1,6 +1,19 @@
 /* eslint-disable react/prop-types */
 
-const Inputs = ({ amount, setAmount, setCurrency, currency }) => {
+const Inputs = ({ amount, setAmount, setCurrency, currency, currencies }) => {
+  const currencyList = [
+    'ngn', // Nigeria
+    'ghs', // Ghana
+    'usd', // United States
+    'eur', // European Union
+    'gbp', // United Kingdom
+    'jpy', // Japan
+    'aud', // Australia
+    'cad', // Canada
+    'zar', // South Africa
+    'kes'  // Kenya
+  ];
+
   return (
     <span className="w-fit relative px-2">
       <input
@@ -11,17 +24,19 @@ const Inputs = ({ amount, setAmount, setCurrency, currency }) => {
         onChange={(e) => setAmount(e.target.value)}
       />
 
-      <select  
-        value={currency} 
+      <select
+        value={currency}
         onChange={(e) => setCurrency(e.target.value)}
-        className="absolute right-5 bg-transparent p-5 font-semibold text-black text-2xl rounded-lg"
+        className="absolute right-5 bg-transparent p-5 font-semibold text-black text-2xl rounded-lg uppercase"
       >
-        <option value="ngn">NGN</option>
-        <option value="usd">USD</option>
+        {currencyList.map((currency) => (
+          <option key={currency} value={currency}>
+            {currency}
+          </option>
+        ))}
       </select>
     </span>
   );
 };
-
 
 export default Inputs;
